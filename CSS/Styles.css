@@ -1,0 +1,218 @@
+/* Variables Start */
+:root {
+    --main-background-color: #F6F6F6;
+    --main-color: #10CAB7;
+    --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --main-transition: 0.3s;
+}
+/* Variables End */
+/* Global Rules Start */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /* the Media Tasks will override it and u dont need it to make it responsive */
+    width: 600px;
+}
+/* Small Screen */
+@media (min-width:767px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Med Screens */
+@media (min-width:991px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large Screens */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* Global Rules End */
+/* Components Start */
+    .special-heading {
+        color: #ebeced;
+        font-size: 100px;
+        text-align: center;
+        font-weight: 800;
+        letter-spacing: -3px;
+        margin: 0;
+    }
+    .special-heading + p {
+        margin: -30px 0 0;
+        font-size: 20px;
+        text-align: center;
+        color: #797979;
+    }
+    @media (max-width:767px) {
+        .special-heading {
+            font-size: 60px;
+        }
+        .special-heading + p {
+            margin-top: -20px;
+        }
+    }
+/* Components End */
+/* Header Start */
+    .header {
+        padding: 20px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        width: 60px;
+    }
+    .links {
+        position: relative;
+    }
+    .header .container .links:hover .icon span:nth-child(2) {
+        width: 100%;
+    }
+    .icon {
+        width: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .icon span {
+        background-color: black;
+        margin-bottom: 5px
+    }
+    .icon span:first-child {
+        height: 3px;
+        width: 100%;
+    }
+    .icon span:nth-child(2) {
+        height: 3px;
+        width: 60%;
+        transition: var(--main-transition);
+    }
+    .icon span:last-child {
+        height: 3px;
+        width: 100%;
+    }
+    .header .container .links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top:calc(100% + 15px) ;
+        min-width: 200px;
+        background-color: var(--main-background-color);
+        display: none;
+    }
+    .header .links ul::before {
+        content: "";
+        position: absolute;
+        border: 10px solid;
+        border-color: transparent transparent crimson transparent;
+        /* border width 20px and icon 30px so 5px right and left to center
+        -20px to get above the links border */
+        right: 5px;
+        top: -20px;
+    }
+    .header .links:hover ul {
+        display: block;
+        z-index: 1;
+    }
+    .header .links ul li a {
+        text-decoration: none;
+        display: block;
+        padding: 15px;
+        color: black;
+        transition: var(--main-transition);
+    }
+    .header .links ul li a:hover {
+        padding-left: 25px;
+    }
+    .header .links ul li:not(:last-child) {
+        border-bottom: 1px solid black;
+    }
+/* Header End */
+/* Landing Start */
+.landing {
+    background-image: url(/imgs/pexels-pixabay-355747.jpg);
+    background-size: cover;
+    /* 64px is header height */
+    height: calc(100vh - 64px);
+    position: relative;
+}
+.landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    /* width the text to appear 2 lines as the pic it will stop responsive so use max width */
+    width: 320px;
+    max-width: 100%;
+}
+.landing .intro-text h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main-color);
+}
+.landing .intro-text p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+/* Landing End */
+/* Features Start */
+    .features {
+        padding-top: var(--section-padding);
+        padding-bottom: var(--section-padding);
+    }
+    .features .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+        gap: 20px;
+    }
+    .features .container .feat {
+        text-align: center;
+        padding: 20px;
+    }
+    .features .feat i {
+        color: var(--main-color);
+    }
+    .features .feat h3 {
+        font-size: 20px;
+        font-weight: 800;
+        margin-top: 30px;
+    }
+    .features .feat p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+/* Features End */
+/* Services Start */
+
+/* Services End */
+/* Portfolio Start */
+
+/* Portfolio End */
+/* About Start */
+
+/* About End */
+/* Contact Start */
+
+/* Contact End */
+/* Footer Start */
+
+/* Footer End */
