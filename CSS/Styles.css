@@ -352,6 +352,11 @@ body {
       top: -20px;
       z-index: -1;
     }
+    @media (max-width:768px) {
+      .about-content .image::after {
+        display: none;
+      }
+    }
     .about .about-content .image img {
       max-width: 100%;
     }
