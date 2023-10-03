@@ -152,7 +152,7 @@ body {
 /* Header End */
 /* Landing Start */
 .landing {
-    background-image: url(/imgs/pexels-pixabay-355747.jpg);
+    background-image: url(../imgs/pexels-pixabay-355747.jpg);
     background-size: cover;
     /* 64px is header height */
     height: calc(100vh - 64px);
