@@ -2,7 +2,7 @@
 
 <h2>📄 About The Project:</h2>
 <p>My First Development For a Template Project</p>
-<h2 align="center">Screenshots of the Project 📸</h2>
+<h2 align="center">📸 Screenshots of the Project 📸</h2>
 <img src="https://i.imgur.com/4EeAV3h.png" alt="website-image">
 
 <h3> Home Page 🏡 Demo :</h3>
