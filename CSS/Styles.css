@@ -90,6 +90,7 @@ body {
     }
     .icon {
         width: 30px;
+        /* spans are inline so you need to display flex .icon or make spans block or flex to respect width */
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
